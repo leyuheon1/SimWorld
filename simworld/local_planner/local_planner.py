@@ -220,7 +220,7 @@ class LocalPlanner:
                 else:
                     action_str += f'I chose to step backward for {vlm_action.duration} seconds.'
 
-                _human_collision, _object_collision, _building_collision = self.communicator.get_collision_number(self.agent.id)
+                _human_collision, _object_collision, _building_collision, _vehicle_collision = self.communicator.get_collision_number(self.agent.id)
                 if _human_collision > 0 or _object_collision > 0 or _building_collision > 0:
                     action_str += 'But I have collided with something.'
 
